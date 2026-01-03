@@ -1,0 +1,25 @@
+{
+  "name": "@stripe-express-demo/event-consumer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@azure/service-bus": "^7.9.5",
+    "@stripe-express-demo/shared": "^1.0.0",
+    "dotenv": "^17.2.3"
+  }
+}
