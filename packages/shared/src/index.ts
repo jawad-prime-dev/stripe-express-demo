@@ -5,7 +5,6 @@ export * from './domain/value-objects';
 export * from './domain/events/domain-event-type';
 export * from './domain/events/domain-event';
 export * from './domain/events/payment-created.event';
-export * from './domain/events/payment-confirmed.event';
 export * from './common/result';
 export * from './infrastructure/service-bus-client'
 export * from './contracts/event-envelope';

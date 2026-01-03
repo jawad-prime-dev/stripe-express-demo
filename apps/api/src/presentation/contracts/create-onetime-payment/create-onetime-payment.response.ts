@@ -1,5 +1,4 @@
-import { Payment } from "../../../domain/payment";
-import { HasPaymentId, HasPaymentReference } from "../../../domain/value-objects";
+import { Payment, HasPaymentId, HasPaymentReference } from "@stripe-express-demo/shared";
 import { MoneyDto } from "./money.dto";
 
 export class CreateOneTimePaymentResponse{

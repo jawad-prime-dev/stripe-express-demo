@@ -1,7 +1,5 @@
-import { Payment } from '../domain/payment';
-import { Result } from '../domain/shared/result';
-import { PaymentReference } from '../domain/value-objects';
+import { Result, DomainEventTuple } from "@stripe-express-demo/shared";
 
 export interface IPaymentGateway{
-    createOneTimePayment(payment: Payment): Promise<Result<PaymentReference>>
+    constructEvent(rawBody: Buffer, signature: string): Promise<Result<DomainEventTuple>>;
 }

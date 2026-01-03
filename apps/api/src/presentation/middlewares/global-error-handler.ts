@@ -1,4 +1,3 @@
-// middlewares/globalErrorHandler.ts
 import { Request, Response, NextFunction } from "express";
 import { errorResponse } from "../contracts/error.response";
 

@@ -1,6 +1,5 @@
+import { Money, Amount, Currency } from "@stripe-express-demo/shared";
 import { IsNumber, IsString } from "class-validator";
-import { Money } from "../../../domain/money";
-import { Amount, Currency } from '../../../domain/value-objects';
 
 export class MoneyDto {
   @IsNumber()

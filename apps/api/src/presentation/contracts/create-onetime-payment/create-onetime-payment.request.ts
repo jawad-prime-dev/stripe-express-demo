@@ -1,10 +1,7 @@
-// presentation/dtos/CreateOneTimePaymentRequest.ts
 import { Type } from "class-transformer";
 import { IsString, IsOptional } from "class-validator";
-import { CustomerId, NoPaymentId, PaymentReference, NoPaymentReference } from '../../../domain/value-objects';
-import { PaymentStatus } from "../../../domain/payment-status";
-import { Payment } from "../../../domain/payment";
 import { MoneyDto } from "./money.dto";
+import { CustomerId, NoPaymentId, NoPaymentReference, Payment, PaymentStatus } from "@stripe-express-demo/shared";
 
 export class CreateOneTimePaymentRequest {
   @IsOptional()

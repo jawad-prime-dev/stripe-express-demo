@@ -3,6 +3,8 @@ export interface ErrorResponse {
   readonly errors?: readonly string[];
 }
 
+
+// ===== Helpers =====
 export const errorResponse = (
   message: string,
   errors?: string[]
