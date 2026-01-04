@@ -1,5 +1,5 @@
-import { Payment, Result, PaymentReference, DomainEvent, DomainEventTuple } from "@stripe-express-demo/shared";
+import { Payment, Result, PaymentReference, DomainEvent, DomainEventTuple, IdempotencyKey } from "@stripe-express-demo/shared";
 
 export interface IPaymentRepo{
-    createOneTimePayment(payment: Payment): Promise<Result<PaymentReference>>
+    persistPayment(payment: Payment, idempotencyKey: IdempotencyKey): Promise<Result<Payment>>
 }

@@ -1,8 +1,9 @@
-import { HasPaymentReference, ok, Payment, PaymentReference, Result } from "@stripe-express-demo/shared";
+import { HasPaymentId, HasPaymentReference, IdempotencyKey, ok, Payment, PaymentReference, Result } from "@stripe-express-demo/shared";
 import { IPaymentRepo } from "../application/payment-repo";
+import { randomUUID } from "crypto";
 
 export class PaymentRepo implements IPaymentRepo{
-    async createOneTimePayment(payment: Payment): Promise<Result<PaymentReference>> {
-    return ok(new HasPaymentReference("pi_mock_123" ));
+    async persistPayment(payment: Payment, idempotencyKey: IdempotencyKey): Promise<Result<Payment>> {
+        return ok(new Payment({...payment, id: new HasPaymentId(randomUUID()) } ));
     }
 }
