@@ -7,4 +7,5 @@ export * from './domain/events/domain-event';
 export * from './domain/events/payment-created.event';
 export * from './common/result';
 export * from './infrastructure/service-bus-client'
+export * from './infrastructure/stripe-event';
 export * from './contracts/event-envelope';
